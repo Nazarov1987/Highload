@@ -1,0 +1,465 @@
+Generating clink initial settings in "D:\HashiCorp\Cmder\config\settings"
+Скопировано файлов: 1.
+Additional *.lua files in "D:\HashiCorp\Cmder\config" are loaded on startup.
+Creating initial user_aliases store in "D:\HashiCorp\Cmder\config\user_aliases.cmd"...
+Скопировано файлов: 1.
+Running Git for Windows one time Post Install....
+"running post-install"
+'C:\Windows\system32\drivers\etc\hosts' -> '/etc/hosts'
+'C:\Windows\system32\drivers\etc\protocol' -> '/etc/protocols'
+'C:\Windows\system32\drivers\etc\services' -> '/etc/services'
+'C:\Windows\system32\drivers\etc\networks' -> '/etc/networks'
+Не удается найти пакетный файл.
+Creating user startup file: "D:\HashiCorp\Cmder\config\user_profile.cmd"
+Скопировано файлов: 1.
+
+D:\HashiCorp\Cmder
+λ cd D:\HashiCorp\ubuntu
+
+D:\HashiCorp\ubuntu
+λ vagrant box add ubuntu/trusty64
+==> box: Loading metadata for box 'ubuntu/trusty64'
+ box: URL: https://vagrantcloud.com/ubuntu/trusty64
+==> box: Adding box 'ubuntu/trusty64' (v20190514.0.0) for provider: virtualbox
+ box: Downloading:
+https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/20190514.0.0/providers/virtualbox.box
+Download redirected to host: cloud-images.ubuntu.com
+ box:
+==> box: Successfully added box 'ubuntu/trusty64' (v20190514.0.0) for 'virtualbox'!
+
+D:\HashiCorp\ubuntu
+λ vagrant init ubuntu/trusty64
+A `Vagrantfile` has been placed in this directory. You are now
+ready to `vagrant up` your first virtual environment! Please read
+the comments in the Vagrantfile as well as documentation on
+`vagrantup.com` for more information on using Vagrant.
+
+D:\HashiCorp\ubuntu
+λ vagrant up
+Bringing machine 'default' up with 'virtualbox' provider...
+==> default: Importing base box 'ubuntu/trusty64'...
+==> default: Matching MAC address for NAT networking...
+==> default: Checking if box 'ubuntu/trusty64' version '20190514.0.0' is up to date...
+==> default: Setting the name of the VM: ubuntu_default_1597843158168_24611
+==> default: Clearing any previously set forwarded ports...
+Vagrant is currently configured to create VirtualBox synced folders with
+the `SharedFoldersEnableSymlinksCreate` option enabled. If the Vagrant
+guest is not trusted, you may want to disable this option. For more
+information on this option, please refer to the VirtualBox manual:
+ https://www.virtualbox.org/manual/ch04.html#sharedfolders
+This option can be disabled globally with an environment variable:
+ VAGRANT_DISABLE_VBOXSYMLINKCREATE=1
+or on a per folder basis within the Vagrantfile:
+ config.vm.synced_folder '/host/path', '/guest/path', SharedFoldersEnableSymlinksCreate: false
+==> default: Clearing any previously set network interfaces...
+==> default: Preparing network interfaces based on configuration...
+ default: Adapter 1: nat
+==> default: Forwarding ports...
+ default: 22 (guest) => 2222 (host) (adapter 1)
+==> default: Booting VM...
+==> default: Waiting for machine to boot. This may take a few minutes...
+ default: SSH address: 127.0.0.1:2222
+ default: SSH username: vagrant
+ default: SSH auth method: private key
+ default: Warning: Connection reset. Retrying...
+ default: Warning: Connection aborted. Retrying...
+ default: Warning: Connection reset. Retrying...
+ default: Warning: Connection aborted. Retrying...
+ default:
+ default: Vagrant insecure key detected. Vagrant will automatically replace
+ default: this with a newly generated keypair for better security.
+ default:
+ default: Inserting generated public key within guest...
+ default: Removing insecure key from the guest if it's present...
+ default: Key inserted! Disconnecting and reconnecting using new SSH key...
+==> default: Machine booted and ready!
+==> default: Checking for guest additions in VM...
+ default: The guest additions on this VM do not match the installed version of
+ default: VirtualBox! In most cases this is fine, but in rare cases it can
+ default: prevent things such as shared folders from working properly. If you see
+ default: shared folder errors, please make sure the guest additions within the
+ default: virtual machine match the version of VirtualBox you have installed on
+ default: your host and reload your VM.
+ default:
+ default: Guest Additions Version: 4.3.40
+ default: VirtualBox Version: 6.1
+==> default: Mounting shared folders...
+ default: /vagrant => D:/HashiCorp/ubuntu
+
+D:\HashiCorp\ubuntu
+λ vagrant ssh-config
+Host default
+ HostName 127.0.0.1
+ User vagrant
+ Port 2222
+ UserKnownHostsFile /dev/null
+ StrictHostKeyChecking no
+ PasswordAuthentication no
+ IdentityFile D:/HashiCorp/ubuntu/.vagrant/machines/default/virtualbox/private_key
+ IdentitiesOnly yes
+ LogLevel FATAL
+
+D:\HashiCorp\ubuntu
+λ ssh vagrant@127.0.0.1 -p 2222 –i
+D:/HashiCorp/ubuntu/.vagrant/machines/default/virtualbox/private_key
+load pubkey "D:/HashiCorp/ubuntu/.vagrant/machines/default/virtualbox/private_key": invalid
+format
+The authenticity of host '[127.0.0.1]:2222 ([127.0.0.1]:2222)' can't be established.
+ECDSA key fingerprint is SHA256:FrO5Qzv55u3xqZ7GrRrDdaFDk82UV9Mm+zvtEgvMJUk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added '[127.0.0.1]:2222' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 14.04.6 LTS (GNU/Linux 3.13.0-170-generic x86_64)
+* Documentation: https://help.ubuntu.com/
+System information disabled due to load higher than 1.0
+UA Infrastructure Extended Security Maintenance (ESM) is not enabled.
+0 updates can be installed immediately.
+0 of these updates are security updates.
+Enable UA Infrastructure ESM to receive 64 additional security updates.
+See https://ubuntu.com/advantage or run: sudo ua status
+New release '16.04.7 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+vagrant@vagrant-ubuntu-trusty-64:~$
+
+D:\HashiCorp\Cmder
+λ ssh vagrant@127.0.0.1 -p 2222
+vagrant@127.0.0.1's password:
+Welcome to Ubuntu 14.04.6 LTS (GNU/Linux 3.13.0-170-generic x86_64)
+* Documentation: https://help.ubuntu.com/
+ System information as of Wed Aug 19 17:45:18 UTC 2020
+ System load: 0.0 Processes: 74
+ Usage of /: 3.6% of 39.34GB Users logged in: 0
+ Memory usage: 24% IP address for eth0: 10.0.2.15
+ Swap usage: 0%
+ Graph this data and manage this system at:
+ https://landscape.canonical.com/
+UA Infrastructure Extended Security Maintenance (ESM) is not enabled.
+0 updates can be installed immediately.
+0 of these updates are security updates.
+Enable UA Infrastructure ESM to receive 64 additional security updates.
+See https://ubuntu.com/advantage or run: sudo ua status
+New release '16.04.7 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+Last login: Wed Aug 19 17:45:20 2020 from 10.0.2.2
+
+vagrant@vagrant-ubuntu-trusty-64:~$ su root
+Password:
+
+root@vagrant-ubuntu-trusty-64:/home/vagrant# apt do-release-upgrade —d
+
+root@vagrant-ubuntu-trusty-64:/home/vagrant# apt update && apt upgrade
+Get:1 http://security.ubuntu.com trusty-security InRelease [65.9 kB]
+Ign http://archive.ubuntu.com trusty InRelease
+Get:2 http://archive.ubuntu.com trusty-updates InRelease [65.9 kB]
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://archive.ubuntu.com trusty Release.gpg
+Get:3 http://security.ubuntu.com trusty-security/main Sources [172 kB]
+Hit http://archive.ubuntu.com trusty Release
+Get:4 http://archive.ubuntu.com trusty-updates/main Sources [431 kB]
+Get:5 https://esm.ubuntu.com trusty-infra-security InRelease
+Get:6 https://esm.ubuntu.com trusty-infra-updates InRelease
+Get:7 http://security.ubuntu.com trusty-security/universe Sources [103 kB]
+Get:8 http://security.ubuntu.com trusty-security/main amd64 Packages [835 kB]
+Get:9 https://esm.ubuntu.com trusty-infra-security/main amd64 Packages
+Get:10 http://archive.ubuntu.com trusty-updates/restricted Sources [6,313 B]
+Get:11 http://archive.ubuntu.com trusty-updates/universe Sources [231 kB]
+Get:12 https://esm.ubuntu.com trusty-infra-security/main Translation-en_US
+Get:13 http://archive.ubuntu.com trusty-updates/multiverse Sources [7,535 B]
+Get:14 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1,177 kB]
+Get:15 https://esm.ubuntu.com trusty-infra-updates/main Translation-en_US
+Get:16 http://security.ubuntu.com trusty-security/universe amd64 Packages [295 kB]
+Ign https://esm.ubuntu.com trusty-infra-updates/main Translation-en
+Get:20 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [525 kB]
+Get:21 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [14.6 kB]
+Get:22 http://archive.ubuntu.com trusty-updates/main Translation-en [582 kB]
+Get:23 http://archive.ubuntu.com trusty-updates/multiverse Translation-en [7,616 B]
+Get:24 http://archive.ubuntu.com trusty-updates/restricted Translation-en [4,028 B]
+Get:25 http://archive.ubuntu.com trusty-updates/universe Translation-en [281 kB]
+Get:26 http://archive.ubuntu.com trusty-backports/main Sources [9,709 B]
+Get:27 http://archive.ubuntu.com trusty-backports/restricted Sources [28 B]
+Get:28 http://archive.ubuntu.com trusty-backports/universe Sources [35.4 kB]
+Get:29 http://archive.ubuntu.com trusty-backports/multiverse Sources [1,896 B]
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Get:30 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:31 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:32 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:33 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Hit http://archive.ubuntu.com trusty/main amd64 Packages
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 13.5 MB in 19s (688 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+ ubuntu-advantage-tools
+1 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 47.3 kB of archives.
+After this operation, 1,024 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main ubuntu-advantage-tools amd64
+19.6~ubuntu14.04.4 [47.3 kB]
+Fetched 47.3 kB in 0s (143 kB/s)
+(Reading database ... 63238 files and directories currently installed.)
+Preparing to unpack .../ubuntu-advantage-tools_19.6~ubuntu14.04.4_amd64.deb ...
+Unpacking ubuntu-advantage-tools (19.6~ubuntu14.04.4) over (19.6~ubuntu14.04.3) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up ubuntu-advantage-tools (19.6~ubuntu14.04.4) ...
+
+vagrant@vagrant-ubuntu-trusty-64:~$ apt-cache show nginx | grep -i version
+Version: 1.10.3-0ubuntu0.16.04.5
+Version: 1.9.15-0ubuntu1
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt install nginx
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following extra packages will be installed:
+ libxslt1.1 nginx-common nginx-core
+Suggested packages:
+ fcgiwrap nginx-doc
+The following NEW packages will be installed:
+ libxslt1.1 nginx nginx-common nginx-core
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 495 kB of archives.
+After this operation, 1,802 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libxslt1.1 amd64 1.1.28-2ubuntu0.2
+[146 kB]
+Get:2 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-common all 1.4.6-
+1ubuntu3.9 [18.9 kB]
+Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx-core amd64 1.4.6-
+1ubuntu3.9 [325 kB]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main nginx all 1.4.6-1ubuntu3.9 [5,418
+B]
+Fetched 495 kB in 0s (495 kB/s)
+Preconfiguring packages ...
+Selecting previously unselected package libxslt1.1:amd64.
+(Reading database ... 63238 files and directories currently installed.)
+Preparing to unpack .../libxslt1.1_1.1.28-2ubuntu0.2_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.28-2ubuntu0.2) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../nginx-common_1.4.6-1ubuntu3.9_all.deb ...
+Unpacking nginx-common (1.4.6-1ubuntu3.9) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../nginx-core_1.4.6-1ubuntu3.9_amd64.deb ...
+Unpacking nginx-core (1.4.6-1ubuntu3.9) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.4.6-1ubuntu3.9_all.deb ...
+Unpacking nginx (1.4.6-1ubuntu3.9) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Processing triggers for man-db (2.6.7.1-1ubuntu1) ...
+Setting up libxslt1.1:amd64 (1.1.28-2ubuntu0.2) ...
+Setting up nginx-common (1.4.6-1ubuntu3.9) ...
+Processing triggers for ureadahead (0.100.0-16) ...
+Processing triggers for ufw (0.34~rc-0ubuntu2) ...
+Setting up nginx-core (1.4.6-1ubuntu3.9) ...
+Setting up nginx (1.4.6-1ubuntu3.9) ...
+Processing triggers for libc-bin (2.19-0ubuntu6.15) ...
+
+vagrant@vagrant-ubuntu-trusty-64:~$ ls -l /etc/nginx/
+total 64
+drwxr-xr-x 2 root root 4096 Nov 6 2018 conf.d
+-rw-r--r-- 1 root root 911 Mar 4 2014 fastcgi_params
+-rw-r--r-- 1 root root 2258 Mar 4 2014 koi-utf
+-rw-r--r-- 1 root root 1805 Mar 4 2014 koi-win
+-rw-r--r-- 1 root root 2085 Mar 4 2014 mime.types
+-rw-r--r-- 1 root root 5287 Mar 4 2014 naxsi_core.rules
+-rw-r--r-- 1 root root 287 Mar 4 2014 naxsi.rules
+-rw-r--r-- 1 root root 222 Mar 4 2014 naxsi-ui.conf.1.4.1
+-rw-r--r-- 1 root root 1601 Mar 4 2014 nginx.conf
+-rw-r--r-- 1 root root 180 Mar 4 2014 proxy_params
+-rw-r--r-- 1 root root 465 Mar 4 2014 scgi_params
+drwxr-xr-x 2 root root 4096 Aug 19 18:04 sites-available
+drwxr-xr-x 2 root root 4096 Aug 19 18:04 sites-enabled
+-rw-r--r-- 1 root root 532 Mar 4 2014 uwsgi_params
+-rw-r--r-- 1 root root 3071 Mar 4 2014 win-utf
+
+vagrant@vagrant-ubuntu-trusty-64:~$ service nginx status
+* nginx is running
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt install php
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+ cpp-4.8 erubis gcc-4.8 libasan0 libasound2 libasound2-data libboost-iostreams1.58.0
+libcanberra-gtk3-0
+Creating config file /etc/php/7.0/mods-available/sysvshm.ini with new version
+Creating config file /etc/php/7.0/mods-available/tokenizer.ini with new version
+Setting up php7.0-json (7.0.33-0ubuntu0.16.04.15) ...
+Creating config file /etc/php/7.0/mods-available/json.ini with new version
+Setting up php7.0-opcache (7.0.33-0ubuntu0.16.04.15) ...
+Creating config file /etc/php/7.0/mods-available/opcache.ini with new version
+Setting up php7.0-readline (7.0.33-0ubuntu0.16.04.15) ...
+Creating config file /etc/php/7.0/mods-available/readline.ini with new version
+Setting up php7.0-cli (7.0.33-0ubuntu0.16.04.15) ...
+update-alternatives: using /usr/bin/php7.0 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.0 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.0 to provide /usr/bin/phar.phar (phar.phar) in auto
+mode
+Setting up php (1:7.0+35ubuntu6.1) ...
+Processing triggers for systemd (229-4ubuntu21.28) ...
+Processing triggers for ureadahead (0.100.0-19.1) ...
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt install python-software-properties
+
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+ cpp-4.8 erubis gcc-4.8 libasan0 libasound2 libasound2-data libboost-iostreams1.58.0
+libcanberra-gtk3-0
+ libcanberra-gtk3-module libcanberra0 libcloog-isl4 libcolord1 libcolorhug1 libgcc-4.8-dev
+libgphoto2-port10
+ libgssglue1 libisl10 libjasper1 libllvm3.4 libogg0 libtdb1 libv4l-0 libv4lconvert0 libvorbis0a
+libvorbisfile3
+ libvpx1 python-dbus-dev ruby-domain-name ruby-hiera ruby-http-cookie ruby-netrc ruby-restclient ruby-sqlite3
+ ruby-unf ruby-unf-ext ruby-yajl sound-theme-freedesktop sqlite3
+Use 'sudo apt autoremove' to remove them.
+The following NEW packages will be installed:
+ python-software-properties 
+0 upgraded, 1 newly installed, 0 to remove and 1 not upgraded.
+Need to get 20.6 kB of archives.
+After this operation, 122 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python-softwareproperties all 0.96.20.10 [20.6 kB
+Fetched 20.6 kB in 0s (62.2 kB/s)
+Selecting previously unselected package python-software-properties.
+(Reading database ... 117488 files and directories currently installed.)
+Preparing to unpack .../python-software-properties_0.96.20.10_all.deb ...
+Unpacking python-software-properties (0.96.20.10) ...
+Setting up python-software-properties (0.96.20.10) ...
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo add-apt-repository ppa:ondrej/php
+
+Co-installable PHP versions: PHP 5.6, PHP 7.x and most requested extensions are included.
+Only Supported Versions of P
+P (http://php.net/supported-versions.php) for Supported Ubuntu Releases
+(https://wiki.ubuntu.com/Releases) are provided
+Don't ask for end-of-life PHP versions or Ubuntu release, they won't be provided.
+Debian oldstable and stable packages are provided as well: https://deb.sury.org/#debian-dpa
+You can get more information about the packages at https://deb.sury.org
+BUGS&FEATURES: This PPA now has a issue tracker:
+https://deb.sury.org/#bug-reporting
+CAVEATS:
+1. If you are using php-gearman, you need to add ppa:ondrej/pkg-gearman
+2. If you are using apache2, you are advised to add ppa:ondrej/apache2
+3. If you are using nginx, you are advised to add ppa:ondrej/nginx-mainline
+ or ppa:ondrej/nginx
+PLEASE READ: If you like my work and want to give me a little motivation, please consider
+donating regularly: https://d
+nate.sury.org/
+WARNING: add-apt-repository is broken with non-UTF-8 locales, see
+https://github.com/oerdnj/deb.sury.org/issues/56 for workaround:
+# LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php
+More info: https://launchpad.net/~ondrej/+archive/ubuntu/php
+Press [ENTER] to continue or ctrl-c to cancel adding it
+gpg: keyring `/tmp/tmpu83pbuv7/secring.gpg' created
+gpg: keyring `/tmp/tmpu83pbuv7/pubring.gpg' created
+gpg: requesting key E5267A6C from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpu83pbuv7/trustdb.gpg: trustdb created
+gpg: key E5267A6C: public key "Launchpad PPA for Ondřej Surý" imported
+gpg: Total number processed: 1
+gpg: imported: 1 (RSA: 1)
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Get:4 http://ppa.launchpad.net/ondrej/php/ubuntu xenial InRelease [23.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:6 http://ppa.launchpad.net/ondrej/php/ubuntu xenial/main amd64 Packages [58.4 kB]
+Get:7 http://ppa.launchpad.net/ondrej/php/ubuntu xenial/main Translation-en [30.2 kB]
+Fetched 438 kB in 5s (86.6 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+17 packages can be upgraded. Run 'apt list --upgradable' to see them.
+
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt install php7.1-fpm
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+E: Unable to locate package php7.1-fpm
+E: Couldn't find any package by glob 'php7.1-fpm'
+E: Couldn't find any package by regex 'php7.1-fpm'
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt update
+Hit:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
+Get:3 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
+Get:4 http://ppa.launchpad.net/ondrej/php/ubuntu xenial InRelease [23.9 kB]
+Get:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
+Get:6 http://ppa.launchpad.net/ondrej/php/ubuntu xenial/main amd64 Packages [58.4 kB]
+Get:7 http://ppa.launchpad.net/ondrej/php/ubuntu xenial/main Translation-en [30.2 kB]
+Fetched 438 kB in 5s (86.6 kB/s)
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+17 packages can be upgraded. Run 'apt list --upgradable' to see them.
+vagrant@vagrant-ubuntu-trusty-64:~$ sudo apt install php7.1-fpm
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+The following packages were automatically installed and are no longer required:
+ cpp-4.8 erubis gcc-4.8 libasan0 libasound2 libasound2-data libboost-iostreams1.58.0
+libcanberra-gtk3-0
+ libcanberra-gtk3-module libcanberra0 libcloog-isl4 libcolord1 libcolorhug1 libgcc-4.8-dev
+libgphoto2-port10
+ libgssglue1 libisl10 libjasper1 libllvm3.4 libogg0 libtdb1 libv4l-0 libv4lconvert0 libvorbis0a
+libvorbisfile3
+ libvpx1 python-dbus-dev ruby-domain-name ruby-hiera ruby-http-cookie ruby-netrc ruby-restclient ruby-sqlite3
+ ruby-unf ruby-unf-ext ruby-yajl sound-theme-freedesktop sqlite3
+Use 'sudo apt autoremove' to remove them.
+The following additional packages will be installed:
+ libpcre3 libssl1.1 php-common php7.1-cli php7.1-common php7.1-json php7.1-opcache
+php7.1-readline
+Suggested packages:
+ php-pear
+Creating config file /etc/php/7.1/mods-available/tokenizer.ini with new version
+Setting up php7.1-json (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ...
+Creating config file /etc/php/7.1/mods-available/json.ini with new version
+Setting up php7.1-opcache (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ...
+Creating config file /etc/php/7.1/mods-available/opcache.ini with new version
+Setting up php7.1-readline (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ... 
+Creating config file /etc/php/7.1/mods-available/readline.ini with new version
+Setting up php7.1-cli (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ...
+update-alternatives: using /usr/bin/php7.1 to provide /usr/bin/php (php) in auto mode
+update-alternatives: using /usr/bin/phar7.1 to provide /usr/bin/phar (phar) in auto mode
+update-alternatives: using /usr/bin/phar.phar7.1 to provide /usr/bin/phar.phar (phar.phar) in auto
+mode
+Creating config file /etc/php/7.1/cli/php.ini with new version
+Setting up php7.1-fpm (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ...
+Creating config file /etc/php/7.1/fpm/php.ini with new version
+Processing triggers for libc-bin (2.23-0ubuntu11.2) ...
+Processing triggers for php7.1-cli (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ...
+Processing triggers for systemd (229-4ubuntu21.28) ...
+Processing triggers for ureadahead (0.100.0-19.1) ...
+Processing triggers for php7.1-fpm (7.1.33-17+ubuntu16.04.1+deb.sury.org+1) ...
+* Restarting PHP 7.1 FastCGI Process Manager php-fpm7.1
+ ...done.
+
+vagrant@vagrant-ubuntu-trusty-64:~$ php –v
+PHP 7.1.33-17+ubuntu16.04.1+deb.sury.org+1 (cli) (built: Aug 7 2020 14:46:52) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.1.0, Copyright (c) 1998-2018 Zend Technologies
+ with Zend OPcache v7.1.33-17+ubuntu16.04.1+deb.sury.org+1, Copyright (c) 1999-2018, by
+Zend Technologies 
