@@ -1,0 +1,141 @@
+[vagrant@localhost ~]$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::4ac3:abd0:2190:22a7  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:6a:dc:03  txqueuelen 1000  (Ethernet)
+        RX packets 655  bytes 61490 (60.0 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 449  bytes 55899 (54.5 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.4  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::89cb:ba45:beb1:628a  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:a9:d5:c6  txqueuelen 1000  (Ethernet)
+        RX packets 21  bytes 7124 (6.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 27  bytes 4118 (4.0 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+[vagrant@localhost ~]$
+[vagrant@localhost ~]$ mysql -u vagrant -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 9
+Server version: 8.0.21-12 Percona Server (GPL), Release 12, Revision 7ddfdfe
+
+Copyright (c) 2009-2020 Percona LLC and/or its affiliates
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| db_vagrant         |
+| information_schema |
++--------------------+
+2 rows in set (0.01 sec)
+
+mysql> exit;
+Bye
+[vagrant@localhost ~]$ sudo nano /etc/my.cnf
+[sudo] пароль для vagrant:
+[vagrant@localhost ~]$ service mysql-server restart
+Redirecting to /bin/systemctl restart mysql-server.service
+==== AUTHENTICATING FOR org.freedesktop.systemd1.manage-units ===
+Для управления системными службами и юнитами, необходимо пройти аутентификацию.
+Authenticating as: root
+Password:
+==== AUTHENTICATION COMPLETE ===
+Failed to restart mysql-server.service: Unit not found.
+[vagrant@localhost ~]$ mysql -u vagrant -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 10
+Server version: 8.0.21-12 Percona Server (GPL), Release 12, Revision 7ddfdfe
+
+Copyright (c) 2009-2020 Percona LLC and/or its affiliates
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE db-vagrant;
+
+mysql> CREATE USER 'slave_user'@'%' IDENTIFIED BY 'Altair1215!';
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> GRANT REPLICATION SLAVE ON *.* TO 'slave_user'@'%';
+Query OK, 0 rows affected (0.02 sec)
+
+Database changed
+mysql> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> USE db_vagrant;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+mysql> FLUSH TABLES WITH READ LOCK;
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> show master status;
++------------------+----------+--------------+------------------+-------------------+
+| File             | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
++------------------+----------+--------------+------------------+-------------------+
+| mysql-bin.000002 |      877 | db_vagrant   |                  |                   |
++------------------+----------+--------------+------------------+-------------------+
+1 row in set (0.00 sec)
+
+
+mysql> exit;
+Bye
+[vagrant@localhost ~]$ mysqldump -u root -p --databases db_vagrant > db_vagrant_bck.sql
+Enter password:
+
+[vagrant@localhost ~]$ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 12
+Server version: 8.0.21-12 Percona Server (GPL), Release 12, Revision 7ddfdfe
+
+Copyright (c) 2009-2020 Percona LLC and/or its affiliates
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> USE db_vagrant;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+mysql> UNLOCK TABLES;
+Query OK, 0 rows affected (0.00 sec)
+
+!!!Для реплики!!!
+
+
+
