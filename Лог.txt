@@ -1,0 +1,90 @@
+login as: vagrant
+vagrant@127.0.0.1's password:
+Last login: Tue Nov 17 20:02:55 2020 from gateway
+[vagrant@localhost ~]$ sudo yum install redis-server php72-php-pecl-redis
+[sudo] пароль для vagrant:
+Загружены модули: fastestmirror
+Loading mirror speeds from cached hostfile
+epel/x86_64/metalink                                     |  22 kB     00:00
+ * base: mirror.logol.ru
+ * epel: mirror.nextlayer.at
+ * extras: mirror.reconn.ru
+ * remi-safe: mirror.reconn.ru
+ * updates: mirror.logol.ru
+base                                                     | 3.6 kB     00:00
+epel                                                     | 4.7 kB     00:00
+extras                                                   | 2.9 kB     00:00
+prel-release-noarch                                      | 2.9 kB     00:00
+ps-80-release-x86_64                                     | 2.9 kB     00:00
+remi-safe                                                | 3.0 kB     00:00
+tools-release-x86_64                                     | 2.9 kB     00:00
+updates                                                  | 2.9 kB     00:00
+(1/7): extras/7/x86_64/primary_db                          | 222 kB   00:07
+(2/7): tools-release-x86_64/7/primary_db                   |  85 kB   00:01
+(3/7): epel/x86_64/updateinfo                              | 1.0 MB   00:18
+(4/7): updates/7/x86_64/primary_db                         | 2.5 MB   00:16
+(5/7): remi-safe/primary_db                                | 1.8 MB   00:50
+(6/7): base/7/x86_64/primary_db                            | 6.1 MB   01:09
+(7/7): epel/x86_64/primary_db                              | 6.9 MB   01:22
+Пакета с названием redis-server не найдено.
+Разрешение зависимостей
+--> Проверка сценария
+---> Пакет php72-php-pecl-redis.x86_64 0:3.1.6-1.el7.remi помечен для установки
+--> Обработка зависимостей: php72-php-pecl(igbinary)(x86-64) пакета: php72-php-pecl-redis-3.1.6-1.el7.remi.x86_64
+--> Проверка сценария
+---> Пакет php72-php-pecl-igbinary.x86_64 0:3.1.6-1.el7.remi помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package                    Архитектура
+                                      Версия                 Репозиторий  Размер
+================================================================================
+Установка:
+ php72-php-pecl-redis       x86_64    3.1.6-1.el7.remi       remi-safe    156 k
+Установка зависимостей:
+ php72-php-pecl-igbinary    x86_64    3.1.6-1.el7.remi       remi-safe     68 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет (+1 зависимый)
+
+Объем загрузки: 225 k
+Объем изменений: 735 k
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): php72-php-pecl-igbinary-3.1.6-1.el7.remi.x86_64.rpm |  68 kB   00:00
+(2/2): php72-php-pecl-redis-3.1.6-1.el7.remi.x86_64.rpm    | 156 kB   00:17
+--------------------------------------------------------------------------------
+Общий размер                                        13 kB/s | 225 kB  00:17
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : php72-php-pecl-igbinary-3.1.6-1.el7.remi.x86_64             1/2
+  Установка   : php72-php-pecl-redis-3.1.6-1.el7.remi.x86_64                2/2
+  Проверка    : php72-php-pecl-igbinary-3.1.6-1.el7.remi.x86_64             1/2
+  Проверка    : php72-php-pecl-redis-3.1.6-1.el7.remi.x86_64                2/2
+
+Установлено:
+  php72-php-pecl-redis.x86_64 0:3.1.6-1.el7.remi
+
+Установлены зависимости:
+  php72-php-pecl-igbinary.x86_64 0:3.1.6-1.el7.remi
+
+Выполнено!
+
+[vagrant@localhost ~]$ sudo service redis start
+[sudo] пароль для vagrant:
+Redirecting to /bin/systemctl start redis.service
+
+[vagrant@localhost ~]$ sudo systemctl restart  php72-php-fpm
+
+[vagrant@localhost ~]$ redis-cli
+127.0.0.1:6379> set name Vasya
+OK
+127.0.0.1:6379> get name
+"Vasya"
+
+
