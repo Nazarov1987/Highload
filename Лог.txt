@@ -1,0 +1,298 @@
+[vagrant@localhost ~]$ sudo yum install rabbitmq-server
+[sudo] пароль для vagrant:
+Загружены модули: fastestmirror
+Determining fastest mirrors
+epel/x86_64/metalink                                     |  13 kB     00:00
+ * base: mirrors.datahouse.ru
+ * epel: mirrors.up.pt
+ * extras: mirror.awanti.com
+ * remi-safe: mirror.awanti.com
+ * updates: centos-mirror.rbc.ru
+base                                                     | 3.6 kB     00:00
+epel                                                     | 4.7 kB     00:00
+extras                                                   | 2.9 kB     00:00
+prel-release-noarch                                      | 2.9 kB     00:00
+ps-80-release-x86_64                                     | 2.9 kB     00:00
+remi-safe                                                | 3.0 kB     00:00
+tools-release-x86_64                                     | 2.9 kB     00:00
+updates                                                  | 2.9 kB     00:00
+(1/3): epel/x86_64/updateinfo                              | 1.0 MB   00:01
+(2/3): epel/x86_64/primary_db                              | 6.9 MB   00:03
+(3/3): remi-safe/primary_db                                | 1.8 MB   00:05
+Разрешение зависимостей
+--> Проверка сценария
+---> Пакет rabbitmq-server.noarch 0:3.3.5-34.el7 помечен для установки
+--> Обработка зависимостей: erlang-erts >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-kernel >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-mnesia >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-os_mon >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-public_key >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-sasl >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-ssl >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-stdlib >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-tools >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-xmerl >= R12B-3 пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Обработка зависимостей: erlang-sd_notify пакета: rabbitmq-server-3.3.5-34.el7.noarch
+--> Проверка сценария
+---> Пакет erlang-erts.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: lksctp-tools пакета: erlang-erts-R16B-03.18.el7.x86_64
+---> Пакет erlang-kernel.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-mnesia.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-os_mon.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: erlang-otp_mibs(x86-64) = R16B-03.18.el7 пакета: erlang-os_mon-R16B-03.18.el7.x86_64
+--> Обработка зависимостей: erlang-snmp(x86-64) = R16B-03.18.el7 пакета: erlang-os_mon-R16B-03.18.el7.x86_64
+---> Пакет erlang-public_key.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: erlang-asn1(x86-64) = R16B-03.18.el7 пакета: erlang-public_key-R16B-03.18.el7.x86_64
+--> Обработка зависимостей: erlang-crypto(x86-64) = R16B-03.18.el7 пакета: erlang-public_key-R16B-03.18.el7.x86_64
+---> Пакет erlang-sasl.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-sd_notify.x86_64 0:0.1-1.el7 помечен для установки
+---> Пакет erlang-ssl.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-stdlib.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: erlang-compiler(x86-64) = R16B-03.18.el7 пакета: erlang-stdlib-R16B-03.18.el7.x86_64
+---> Пакет erlang-tools.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: erlang-inets(x86-64) = R16B-03.18.el7 пакета: erlang-tools-R16B-03.18.el7.x86_64
+--> Обработка зависимостей: erlang-runtime_tools(x86-64) = R16B-03.18.el7 пакета: erlang-tools-R16B-03.18.el7.x86_64
+---> Пакет erlang-xmerl.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Проверка сценария
+---> Пакет erlang-asn1.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-compiler.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: erlang-hipe(x86-64) = R16B-03.18.el7 пакета: erlang-compiler-R16B-03.18.el7.x86_64
+---> Пакет erlang-crypto.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-inets.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-otp_mibs.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-runtime_tools.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет erlang-snmp.x86_64 0:R16B-03.18.el7 помечен для установки
+---> Пакет lksctp-tools.x86_64 0:1.0.17-2.el7 помечен для установки
+--> Проверка сценария
+---> Пакет erlang-hipe.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Обработка зависимостей: erlang-syntax_tools(x86-64) = R16B-03.18.el7 пакета: erlang-hipe-R16B-03.18.el7.x86_64
+--> Проверка сценария
+---> Пакет erlang-syntax_tools.x86_64 0:R16B-03.18.el7 помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package                    Архитектура  Версия                Репозиторий
+                                                                          Размер
+================================================================================
+Установка:
+ rabbitmq-server            noarch       3.3.5-34.el7          epel       4.0 M
+Установка зависимостей:
+ erlang-asn1                x86_64       R16B-03.18.el7        epel       758 k
+ erlang-compiler            x86_64       R16B-03.18.el7        epel       1.0 M
+ erlang-crypto              x86_64       R16B-03.18.el7        epel        86 k
+ erlang-erts                x86_64       R16B-03.18.el7        epel       2.5 M
+ erlang-hipe                x86_64       R16B-03.18.el7        epel       2.4 M
+ erlang-inets               x86_64       R16B-03.18.el7        epel       800 k
+ erlang-kernel              x86_64       R16B-03.18.el7        epel       1.1 M
+ erlang-mnesia              x86_64       R16B-03.18.el7        epel       700 k
+ erlang-os_mon              x86_64       R16B-03.18.el7        epel       115 k
+ erlang-otp_mibs            x86_64       R16B-03.18.el7        epel        32 k
+ erlang-public_key          x86_64       R16B-03.18.el7        epel       538 k
+ erlang-runtime_tools       x86_64       R16B-03.18.el7        epel       179 k
+ erlang-sasl                x86_64       R16B-03.18.el7        epel       293 k
+ erlang-sd_notify           x86_64       0.1-1.el7             epel       9.1 k
+ erlang-snmp                x86_64       R16B-03.18.el7        epel       1.5 M
+ erlang-ssl                 x86_64       R16B-03.18.el7        epel       588 k
+ erlang-stdlib              x86_64       R16B-03.18.el7        epel       2.2 M
+ erlang-syntax_tools        x86_64       R16B-03.18.el7        epel       336 k
+ erlang-tools               x86_64       R16B-03.18.el7        epel       566 k
+ erlang-xmerl               x86_64       R16B-03.18.el7        epel       998 k
+ lksctp-tools               x86_64       1.0.17-2.el7          base        88 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет (+21 зависимый)
+
+Объем загрузки: 21 M
+Объем изменений: 36 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/22): erlang-asn1-R16B-03.18.el7.x86_64.rpm              | 758 kB   00:01
+(2/22): erlang-crypto-R16B-03.18.el7.x86_64.rpm            |  86 kB   00:00
+(3/22): erlang-compiler-R16B-03.18.el7.x86_64.rpm          | 1.0 MB   00:01
+(4/22): erlang-erts-R16B-03.18.el7.x86_64.rpm              | 2.5 MB   00:01
+(5/22): erlang-inets-R16B-03.18.el7.x86_64.rpm             | 800 kB   00:00
+(6/22): erlang-hipe-R16B-03.18.el7.x86_64.rpm              | 2.4 MB   00:01
+(7/22): erlang-kernel-R16B-03.18.el7.x86_64.rpm            | 1.1 MB   00:00
+(8/22): erlang-mnesia-R16B-03.18.el7.x86_64.rpm            | 700 kB   00:00
+(9/22): erlang-os_mon-R16B-03.18.el7.x86_64.rpm            | 115 kB   00:00
+(10/22): erlang-otp_mibs-R16B-03.18.el7.x86_64.rpm         |  32 kB   00:00
+(11/22): erlang-runtime_tools-R16B-03.18.el7.x86_64.rpm    | 179 kB   00:00
+(12/22): erlang-sasl-R16B-03.18.el7.x86_64.rpm             | 293 kB   00:00
+(13/22): erlang-sd_notify-0.1-1.el7.x86_64.rpm             | 9.1 kB   00:00
+(14/22): erlang-public_key-R16B-03.18.el7.x86_64.rpm       | 538 kB   00:00
+(15/22): erlang-snmp-R16B-03.18.el7.x86_64.rpm             | 1.5 MB   00:01
+(16/22): erlang-ssl-R16B-03.18.el7.x86_64.rpm              | 588 kB   00:00
+(17/22): erlang-syntax_tools-R16B-03.18.el7.x86_64.rpm     | 336 kB   00:00
+(18/22): erlang-tools-R16B-03.18.el7.x86_64.rpm            | 566 kB   00:00
+(19/22): lksctp-tools-1.0.17-2.el7.x86_64.rpm              |  88 kB   00:00
+(20/22): erlang-xmerl-R16B-03.18.el7.x86_64.rpm            | 998 kB   00:00
+(21/22): erlang-stdlib-R16B-03.18.el7.x86_64.rpm           | 2.2 MB   00:02
+(22/22): rabbitmq-server-3.3.5-34.el7.noarch.rpm           | 4.0 MB   00:02
+--------------------------------------------------------------------------------
+Общий размер                                       2.0 MB/s |  21 MB  00:10
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : lksctp-tools-1.0.17-2.el7.x86_64                           1/22
+  Установка   : erlang-crypto-R16B-03.18.el7.x86_64                        2/22
+  Установка   : erlang-kernel-R16B-03.18.el7.x86_64                        3/22
+  Установка   : erlang-stdlib-R16B-03.18.el7.x86_64                        4/22
+  Установка   : erlang-erts-R16B-03.18.el7.x86_64                          5/22
+  Установка   : erlang-syntax_tools-R16B-03.18.el7.x86_64                  6/22
+  Установка   : erlang-compiler-R16B-03.18.el7.x86_64                      7/22
+  Установка   : erlang-hipe-R16B-03.18.el7.x86_64                          8/22
+  Установка   : erlang-mnesia-R16B-03.18.el7.x86_64                        9/22
+  Установка   : erlang-runtime_tools-R16B-03.18.el7.x86_64                10/22
+  Установка   : erlang-snmp-R16B-03.18.el7.x86_64                         11/22
+  Установка   : erlang-otp_mibs-R16B-03.18.el7.x86_64                     12/22
+  Установка   : erlang-sd_notify-0.1-1.el7.x86_64                         13/22
+  Установка   : erlang-xmerl-R16B-03.18.el7.x86_64                        14/22
+  Установка   : erlang-asn1-R16B-03.18.el7.x86_64                         15/22
+  Установка   : erlang-public_key-R16B-03.18.el7.x86_64                   16/22
+  Установка   : erlang-ssl-R16B-03.18.el7.x86_64                          17/22
+  Установка   : erlang-inets-R16B-03.18.el7.x86_64                        18/22
+  Установка   : erlang-tools-R16B-03.18.el7.x86_64                        19/22
+  Установка   : erlang-sasl-R16B-03.18.el7.x86_64                         20/22
+  Установка   : erlang-os_mon-R16B-03.18.el7.x86_64                       21/22
+  Установка   : rabbitmq-server-3.3.5-34.el7.noarch                       22/22
+  Проверка    : erlang-sd_notify-0.1-1.el7.x86_64                          1/22
+  Проверка    : rabbitmq-server-3.3.5-34.el7.noarch                        2/22
+  Проверка    : erlang-erts-R16B-03.18.el7.x86_64                          3/22
+  Проверка    : erlang-stdlib-R16B-03.18.el7.x86_64                        4/22
+  Проверка    : erlang-compiler-R16B-03.18.el7.x86_64                      5/22
+  Проверка    : erlang-mnesia-R16B-03.18.el7.x86_64                        6/22
+  Проверка    : erlang-crypto-R16B-03.18.el7.x86_64                        7/22
+  Проверка    : erlang-hipe-R16B-03.18.el7.x86_64                          8/22
+  Проверка    : erlang-inets-R16B-03.18.el7.x86_64                         9/22
+  Проверка    : erlang-runtime_tools-R16B-03.18.el7.x86_64                10/22
+  Проверка    : erlang-public_key-R16B-03.18.el7.x86_64                   11/22
+  Проверка    : erlang-sasl-R16B-03.18.el7.x86_64                         12/22
+  Проверка    : erlang-kernel-R16B-03.18.el7.x86_64                       13/22
+  Проверка    : lksctp-tools-1.0.17-2.el7.x86_64                          14/22
+  Проверка    : erlang-ssl-R16B-03.18.el7.x86_64                          15/22
+  Проверка    : erlang-xmerl-R16B-03.18.el7.x86_64                        16/22
+  Проверка    : erlang-os_mon-R16B-03.18.el7.x86_64                       17/22
+  Проверка    : erlang-otp_mibs-R16B-03.18.el7.x86_64                     18/22
+  Проверка    : erlang-tools-R16B-03.18.el7.x86_64                        19/22
+  Проверка    : erlang-snmp-R16B-03.18.el7.x86_64                         20/22
+  Проверка    : erlang-syntax_tools-R16B-03.18.el7.x86_64                 21/22
+  Проверка    : erlang-asn1-R16B-03.18.el7.x86_64                         22/22
+
+Установлено:
+  rabbitmq-server.noarch 0:3.3.5-34.el7
+
+Установлены зависимости:
+  erlang-asn1.x86_64 0:R16B-03.18.el7
+  erlang-compiler.x86_64 0:R16B-03.18.el7
+  erlang-crypto.x86_64 0:R16B-03.18.el7
+  erlang-erts.x86_64 0:R16B-03.18.el7
+  erlang-hipe.x86_64 0:R16B-03.18.el7
+  erlang-inets.x86_64 0:R16B-03.18.el7
+  erlang-kernel.x86_64 0:R16B-03.18.el7
+  erlang-mnesia.x86_64 0:R16B-03.18.el7
+  erlang-os_mon.x86_64 0:R16B-03.18.el7
+  erlang-otp_mibs.x86_64 0:R16B-03.18.el7
+  erlang-public_key.x86_64 0:R16B-03.18.el7
+  erlang-runtime_tools.x86_64 0:R16B-03.18.el7
+  erlang-sasl.x86_64 0:R16B-03.18.el7
+  erlang-sd_notify.x86_64 0:0.1-1.el7
+  erlang-snmp.x86_64 0:R16B-03.18.el7
+  erlang-ssl.x86_64 0:R16B-03.18.el7
+  erlang-stdlib.x86_64 0:R16B-03.18.el7
+  erlang-syntax_tools.x86_64 0:R16B-03.18.el7
+  erlang-tools.x86_64 0:R16B-03.18.el7
+  erlang-xmerl.x86_64 0:R16B-03.18.el7
+  lksctp-tools.x86_64 0:1.0.17-2.el7
+
+Выполнено!
+
+[vagrant@localhost ~]$ sudo rabbitmq-plugins enable rabbitmq_management
+The following plugins have been enabled:
+  mochiweb
+  webmachine
+  rabbitmq_web_dispatch
+  amqp_client
+  rabbitmq_management_agent
+  rabbitmq_management
+Plugin configuration has changed. Restart RabbitMQ for changes to take effect.
+
+[vagrant@localhost ~]$ sudo service rabbitmq-server restart
+Redirecting to /bin/systemctl restart rabbitmq-server.service
+
+
+[vagrant@localhost ~]$ sudo netstat -tulpn | grep beam
+tcp        0      0 0.0.0.0:15672           0.0.0.0:*               LISTEN      1799/beam
+tcp        0      0 0.0.0.0:25672           0.0.0.0:*               LISTEN      1799/beam
+tcp6       0      0 :::5672                 :::*                    LISTEN      1799/beam
+
+[vagrant@localhost ~]$ sudo yum install php72-php-pecl-amqp
+Загружены модули: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirrors.datahouse.ru
+ * epel: mirrors.up.pt
+ * extras: mirror.awanti.com
+ * remi-safe: mirror.awanti.com
+ * updates: centos-mirror.rbc.ru
+Разрешение зависимостей
+--> Проверка сценария
+---> Пакет php72-php-pecl-amqp.x86_64 0:1.10.2-1.el7.remi помечен для установки
+--> Обработка зависимостей: librabbitmq(x86-64) >= 0.8.0 пакета: php72-php-pecl-amqp-1.10.2-1.el7.remi.x86_64
+--> Обработка зависимостей: librabbitmq.so.4()(64bit) пакета: php72-php-pecl-amqp-1.10.2-1.el7.remi.x86_64
+--> Проверка сценария
+---> Пакет librabbitmq.x86_64 0:0.8.0-3.el7 помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package                 Архитектура
+                                    Версия                  Репозиторий   Размер
+================================================================================
+Установка:
+ php72-php-pecl-amqp     x86_64     1.10.2-1.el7.remi       remi-safe      82 k
+Установка зависимостей:
+ librabbitmq             x86_64     0.8.0-3.el7             base           37 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет (+1 зависимый)
+
+Объем загрузки: 119 k
+Объем изменений: 366 k
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): librabbitmq-0.8.0-3.el7.x86_64.rpm                  |  37 kB   00:00
+(2/2): php72-php-pecl-amqp-1.10.2-1.el7.remi.x86_64.rpm    |  82 kB   00:00
+--------------------------------------------------------------------------------
+Общий размер                                       116 kB/s | 119 kB  00:01
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Установка   : librabbitmq-0.8.0-3.el7.x86_64                              1/2
+  Установка   : php72-php-pecl-amqp-1.10.2-1.el7.remi.x86_64                2/2
+  Проверка    : librabbitmq-0.8.0-3.el7.x86_64                              1/2
+  Проверка    : php72-php-pecl-amqp-1.10.2-1.el7.remi.x86_64                2/2
+
+Установлено:
+  php72-php-pecl-amqp.x86_64 0:1.10.2-1.el7.remi
+
+Установлены зависимости:
+  librabbitmq.x86_64 0:0.8.0-3.el7
+
+Выполнено!
+
+[vagrant@localhost ~]$ sudo rabbitmqctl add_user test test
+Creating user "test" ...
+...done.
+[vagrant@localhost ~]$ sudo rabbitmqctl set_user_tags test administrator
+Setting tags for user "test" to [administrator] ...
+...done.
+[vagrant@localhost ~]$ sudo rabbitmqctl set_permissions -p / test ".*" ".*" ".*"
+Setting permissions for user "test" in vhost "/" ...
+...done.
+
