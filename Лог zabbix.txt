@@ -1,0 +1,259 @@
+login as: vagrant
+vagrant@127.0.0.1's password:
+Last login: Wed Nov 25 18:22:46 2020 from gateway
+[vagrant@localhost ~]$ yum -y install dnf
+Загружены модули: fastestmirror
+Для выполнения этой команды необходимы привилегии суперпользователя.
+[vagrant@localhost ~]$ sudo yum -y install dnf
+Загружены модули: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.awanti.com
+ * epel: mirror.yandex.ru
+ * extras: mirror.awanti.com
+ * remi-safe: mirror.awanti.com
+ * updates: mirror.yandex.ru
+Разрешение зависимостей
+--> Проверка сценария
+---> Пакет dnf.noarch 0:4.0.9.2-1.el7_6 помечен для установки
+--> Обработка зависимостей: python2-dnf = 4.0.9.2-1.el7_6 пакета: dnf-4.0.9.2-1.el7_6.noarch
+--> Проверка сценария
+---> Пакет python2-dnf.noarch 0:4.0.9.2-1.el7_6 помечен для установки
+--> Обработка зависимостей: dnf-data = 4.0.9.2-1.el7_6 пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: python2-libdnf >= 0.22.5 пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: python2-libcomps >= 0.1.8 пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: python2-hawkey >= 0.22.5 пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: libmodulemd >= 1.4.0 пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: python2-libdnf пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: python-enum34 пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Обработка зависимостей: deltarpm пакета: python2-dnf-4.0.9.2-1.el7_6.noarch
+--> Проверка сценария
+---> Пакет deltarpm.x86_64 0:3.6-3.el7 помечен для установки
+---> Пакет dnf-data.noarch 0:4.0.9.2-1.el7_6 помечен для установки
+--> Обработка зависимостей: libreport-filesystem пакета: dnf-data-4.0.9.2-1.el7_6.noarch
+---> Пакет libmodulemd.x86_64 0:1.6.3-1.el7 помечен для установки
+--> Обработка зависимостей: libyaml-0.so.2()(64bit) пакета: libmodulemd-1.6.3-1.el7.x86_64
+---> Пакет python-enum34.noarch 0:1.0.4-1.el7 помечен для установки
+---> Пакет python2-hawkey.x86_64 0:0.22.5-2.el7_9 помечен для установки
+--> Обработка зависимостей: libdnf(x86-64) = 0.22.5-2.el7_9 пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+--> Обработка зависимостей: libsolvext.so.0(SOLV_1.0)(64bit) пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+--> Обработка зависимостей: libsolv.so.0(SOLV_1.0)(64bit) пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+--> Обработка зависимостей: libsolvext.so.0()(64bit) пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+--> Обработка зависимостей: libsolv.so.0()(64bit) пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+--> Обработка зависимостей: librepo.so.0()(64bit) пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+--> Обработка зависимостей: libdnf.so.2()(64bit) пакета: python2-hawkey-0.22.5-2.el7_9.x86_64
+---> Пакет python2-libcomps.x86_64 0:0.1.8-14.el7 помечен для установки
+--> Обработка зависимостей: libcomps(x86-64) = 0.1.8-14.el7 пакета: python2-libcomps-0.1.8-14.el7.x86_64
+--> Обработка зависимостей: libcomps.so.0.1.6()(64bit) пакета: python2-libcomps-0.1.8-14.el7.x86_64
+---> Пакет python2-libdnf.x86_64 0:0.22.5-2.el7_9 помечен для установки
+--> Проверка сценария
+---> Пакет libcomps.x86_64 0:0.1.8-14.el7 помечен для установки
+---> Пакет libdnf.x86_64 0:0.22.5-2.el7_9 помечен для установки
+---> Пакет librepo.x86_64 0:1.8.1-8.el7_9 помечен для установки
+---> Пакет libreport-filesystem.x86_64 0:2.1.11-53.el7.centos помечен для установки
+---> Пакет libsolv.x86_64 0:0.6.34-4.el7 помечен для установки
+---> Пакет libyaml.x86_64 0:0.1.4-11.el7_0 помечен для установки
+--> Проверка зависимостей окончена
+
+Зависимости определены
+
+================================================================================
+ Package                  Архитектура
+                                     Версия                   Репозиторий
+                                                                          Размер
+================================================================================
+Установка:
+ dnf                      noarch     4.0.9.2-1.el7_6          extras      357 k
+Установка зависимостей:
+ deltarpm                 x86_64     3.6-3.el7                base         82 k
+ dnf-data                 noarch     4.0.9.2-1.el7_6          extras       51 k
+ libcomps                 x86_64     0.1.8-14.el7             extras       75 k
+ libdnf                   x86_64     0.22.5-2.el7_9           extras      535 k
+ libmodulemd              x86_64     1.6.3-1.el7              extras      141 k
+ librepo                  x86_64     1.8.1-8.el7_9            updates      82 k
+ libreport-filesystem     x86_64     2.1.11-53.el7.centos     base         41 k
+ libsolv                  x86_64     0.6.34-4.el7             base        329 k
+ libyaml                  x86_64     0.1.4-11.el7_0           base         55 k
+ python-enum34            noarch     1.0.4-1.el7              base         52 k
+ python2-dnf              noarch     4.0.9.2-1.el7_6          extras      414 k
+ python2-hawkey           x86_64     0.22.5-2.el7_9           extras       71 k
+ python2-libcomps         x86_64     0.1.8-14.el7             extras       47 k
+ python2-libdnf           x86_64     0.22.5-2.el7_9           extras      611 k
+
+Итого за операцию
+================================================================================
+Установить  1 пакет (+14 зависимых)
+
+Объем загрузки: 2.9 M
+Объем изменений: 11 M
+Downloading packages:
+(1/15): dnf-data-4.0.9.2-1.el7_6.noarch.rpm                |  51 kB   00:07
+(2/15): libcomps-0.1.8-14.el7.x86_64.rpm                   |  75 kB   00:07
+(3/15): deltarpm-3.6-3.el7.x86_64.rpm                      |  82 kB   00:07
+(4/15): dnf-4.0.9.2-1.el7_6.noarch.rpm                     | 357 kB   00:07
+(5/15): libreport-filesystem-2.1.11-53.el7.centos.x86_64.r |  41 kB   00:00
+(6/15): librepo-1.8.1-8.el7_9.x86_64.rpm                   |  82 kB   00:00
+(7/15): libdnf-0.22.5-2.el7_9.x86_64.rpm                   | 535 kB   00:08
+(8/15): libsolv-0.6.34-4.el7.x86_64.rpm                    | 329 kB   00:01
+(9/15): python2-dnf-4.0.9.2-1.el7_6.noarch.rpm             | 414 kB   00:00
+(10/15): python2-libcomps-0.1.8-14.el7.x86_64.rpm          |  47 kB   00:00
+(11/15): python2-hawkey-0.22.5-2.el7_9.x86_64.rpm          |  71 kB   00:00
+(12/15): libyaml-0.1.4-11.el7_0.x86_64.rpm                 |  55 kB   00:01
+(13/15): python2-libdnf-0.22.5-2.el7_9.x86_64.rpm          | 611 kB   00:01
+(14/15): python-enum34-1.0.4-1.el7.noarch.rpm              |  52 kB   00:04
+(15/15): libmodulemd-1.6.3-1.el7.x86_64.rpm                | 141 kB   00:06
+--------------------------------------------------------------------------------
+Общий размер                                       206 kB/s | 2.9 MB  00:14
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+ПРЕДУПРЕЖДЕНИЕ: база данных RPM была изменена вне Yum.
+  Установка   : librepo-1.8.1-8.el7_9.x86_64                               1/15
+  Установка   : libsolv-0.6.34-4.el7.x86_64                                2/15
+  Установка   : libreport-filesystem-2.1.11-53.el7.centos.x86_64           3/15
+  Установка   : dnf-data-4.0.9.2-1.el7_6.noarch                            4/15
+  Установка   : python-enum34-1.0.4-1.el7.noarch                           5/15
+  Установка   : deltarpm-3.6-3.el7.x86_64                                  6/15
+  Установка   : libcomps-0.1.8-14.el7.x86_64                               7/15
+  Установка   : python2-libcomps-0.1.8-14.el7.x86_64                       8/15
+  Установка   : libyaml-0.1.4-11.el7_0.x86_64                              9/15
+  Установка   : libmodulemd-1.6.3-1.el7.x86_64                            10/15
+  Установка   : libdnf-0.22.5-2.el7_9.x86_64                              11/15
+  Установка   : python2-libdnf-0.22.5-2.el7_9.x86_64                      12/15
+  Установка   : python2-hawkey-0.22.5-2.el7_9.x86_64                      13/15
+  Установка   : python2-dnf-4.0.9.2-1.el7_6.noarch                        14/15
+  Установка   : dnf-4.0.9.2-1.el7_6.noarch                                15/15
+  Проверка    : libsolv-0.6.34-4.el7.x86_64                                1/15
+  Проверка    : libyaml-0.1.4-11.el7_0.x86_64                              2/15
+  Проверка    : python2-libcomps-0.1.8-14.el7.x86_64                       3/15
+  Проверка    : libcomps-0.1.8-14.el7.x86_64                               4/15
+  Проверка    : libmodulemd-1.6.3-1.el7.x86_64                             5/15
+  Проверка    : dnf-data-4.0.9.2-1.el7_6.noarch                            6/15
+  Проверка    : deltarpm-3.6-3.el7.x86_64                                  7/15
+  Проверка    : python2-hawkey-0.22.5-2.el7_9.x86_64                       8/15
+  Проверка    : librepo-1.8.1-8.el7_9.x86_64                               9/15
+  Проверка    : libdnf-0.22.5-2.el7_9.x86_64                              10/15
+  Проверка    : python-enum34-1.0.4-1.el7.noarch                          11/15
+  Проверка    : python2-dnf-4.0.9.2-1.el7_6.noarch                        12/15
+  Проверка    : dnf-4.0.9.2-1.el7_6.noarch                                13/15
+  Проверка    : libreport-filesystem-2.1.11-53.el7.centos.x86_64          14/15
+  Проверка    : python2-libdnf-0.22.5-2.el7_9.x86_64                      15/15
+
+Установлено:
+  dnf.noarch 0:4.0.9.2-1.el7_6
+
+Установлены зависимости:
+  deltarpm.x86_64 0:3.6-3.el7
+  dnf-data.noarch 0:4.0.9.2-1.el7_6
+  libcomps.x86_64 0:0.1.8-14.el7
+  libdnf.x86_64 0:0.22.5-2.el7_9
+  libmodulemd.x86_64 0:1.6.3-1.el7
+  librepo.x86_64 0:1.8.1-8.el7_9
+  libreport-filesystem.x86_64 0:2.1.11-53.el7.centos
+  libsolv.x86_64 0:0.6.34-4.el7
+  libyaml.x86_64 0:0.1.4-11.el7_0
+  python-enum34.noarch 0:1.0.4-1.el7
+  python2-dnf.noarch 0:4.0.9.2-1.el7_6
+  python2-hawkey.x86_64 0:0.22.5-2.el7_9
+  python2-libcomps.x86_64 0:0.1.8-14.el7
+  python2-libdnf.x86_64 0:0.22.5-2.el7_9
+
+Выполнено!
+[vagrant@localhost ~]$ y
+-bash: y: команда не найдена
+[vagrant@localhost ~]$ dnf clean all
+0 файлов удалено
+[vagrant@localhost ~]$ rpm -Uvh https://repo.zabbix.com/zabbix/5.2/rhel/8/x86_64/zabbix-release-5.2-1.el8.noarch.rpm
+Загружается https://repo.zabbix.com/zabbix/5.2/rhel/8/x86_64/zabbix-release-5.2-1.el8.noarch.rpm
+предупреждение: /var/tmp/rpm-tmp.ypfPWs: Заголовок V4 RSA/SHA512 Signature, key ID a14fe591: NOKEY
+ошибка: can't create транзакция lock on /var/lib/rpm/.rpm.lock (Отказано в доступе)
+[vagrant@localhost ~]$ sudo rpm -Uvh https://repo.zabbix.com/zabbix/5.2/rhel/8/x86_64/zabbix-release-5.2-1.el8.noarch.rpm
+Загружается https://repo.zabbix.com/zabbix/5.2/rhel/8/x86_64/zabbix-release-5.2-1.el8.noarch.rpm
+предупреждение: /var/tmp/rpm-tmp.x1u54z: Заголовок V4 RSA/SHA512 Signature, key ID a14fe591: NOKEY
+Подготовка...               ################################# [100%]
+        пакет zabbix-release-5.2-1.el8.noarch уже установлен
+[vagrant@localhost ~]$ sudo dnf clean all
+0 файлов удалено
+[vagrant@localhost ~]$ sudo dnf install zabbix-server-mysql zabbix-web-mysql zabbix-apache-conf zabbix-agent
+Percona Release release/noarch YUM repository   3.7 kB/s | 1.4 kB     00:00
+Zabbix Official Repository non-supported - x86_ 2.0 kB/s | 1.2 kB     00:00
+CentOS-7 - Updates                               90 kB/s | 4.0 MB     00:45
+Zabbix Official Repository - x86_64              31 kB/s |  26 kB     00:00
+Safe Remi's RPM repository for Enterprise Linux  87 kB/s | 2.3 MB     00:26
+CentOS-7 - Base                                  69 kB/s |  10 MB     02:30
+Percona Server 8.0 release/x86_64 YUM repositor  91 kB/s | 2.0 MB     00:22
+Percona Tools release/x86_64 YUM repository      69 kB/s | 3.0 MB     00:44
+Extra Packages for Enterprise Linux 7 - x86_64  122 kB/s |  16 MB     02:17
+CentOS-7 - Extras                                59 kB/s | 283 kB     00:04
+Ошибка:
+ Проблема 1: conflicting requests
+  - nothing provides libmariadb.so.3()(64bit) needed by zabbix-server-mysql-5.2.0-1.el8.x86_64
+  - nothing provides libevent-2.1.so.6()(64bit) needed by zabbix-server-mysql-5.2.0-1.el8.x86_64
+  - nothing provides libmariadb.so.3(libmysqlclient_18)(64bit) needed by zabbix-server-mysql-5.2.0-1.el8.x86_64
+  - nothing provides libmariadb.so.3(libmariadb_3)(64bit) needed by zabbix-server-mysql-5.2.0-1.el8.x86_64
+  - nothing provides libssh.so.4(LIBSSH_4_5_0)(64bit) needed by zabbix-server-mysql-5.2.0-1.el8.x86_64
+  - nothing provides libnetsnmp.so.35()(64bit) needed by zabbix-server-mysql-5.2.0-1.el8.x86_64
+  - nothing provides libmariadb.so.3()(64bit) needed by zabbix-server-mysql-5.2.1-1.el8.x86_64
+  - nothing provides libevent-2.1.so.6()(64bit) needed by zabbix-server-mysql-5.2.1-1.el8.x86_64
+  - nothing provides libmariadb.so.3(libmysqlclient_18)(64bit) needed by zabbix-server-mysql-5.2.1-1.el8.x86_64
+  - nothing provides libmariadb.so.3(libmariadb_3)(64bit) needed by zabbix-server-mysql-5.2.1-1.el8.x86_64
+  - nothing provides libssh.so.4(LIBSSH_4_5_0)(64bit) needed by zabbix-server-mysql-5.2.1-1.el8.x86_64
+  - nothing provides libnetsnmp.so.35()(64bit) needed by zabbix-server-mysql-5.2.1-1.el8.x86_64
+ Проблема 2: conflicting requests
+  - package zabbix-web-mysql-5.2.0-1.el8.noarch requires zabbix-web-deps = 5.2.0-1.el8, but none of the providers can be installed
+  - package zabbix-web-mysql-5.2.1-1.el8.noarch requires zabbix-web-deps = 5.2.1-1.el8, but none of the providers can be installed
+  - nothing provides php-bcmath >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-fpm >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-mbstring >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-ldap >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-gd >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-xml >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-bcmath >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-fpm >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-mbstring >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-ldap >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-gd >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-xml >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+ Проблема 3: conflicting requests
+  - package zabbix-apache-conf-5.2.0-1.el8.noarch requires zabbix-web-deps = 5.2.0-1.el8, but none of the providers can be installed
+  - package zabbix-apache-conf-5.2.1-1.el8.noarch requires zabbix-web-deps = 5.2.1-1.el8, but none of the providers can be installed
+  - nothing provides php-bcmath >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-fpm >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-mbstring >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-ldap >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-gd >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-xml >= 7.2 needed by zabbix-web-deps-5.2.0-1.el8.noarch
+  - nothing provides php-bcmath >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-fpm >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-mbstring >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-ldap >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-gd >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+  - nothing provides php-xml >= 7.2 needed by zabbix-web-deps-5.2.1-1.el8.noarch
+
+[vagrant@localhost ~]$ mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 8
+Server version: 8.0.21-12 Percona Server (GPL), Release 12, Revision 7ddfdfe
+
+Copyright (c) 2009-2020 Percona LLC and/or its affiliates
+Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> create database zabbix character set utf8 collate utf8_bin;
+Query OK, 1 row affected, 2 warnings (0.00 sec)
+
+mysql> create user zabbix@localhost identified by 'Altair1215!';
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> grant all privileges on zabbix.* to zabbix@localhost;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> quit;
+Bye
+
